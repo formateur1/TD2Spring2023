@@ -59,5 +59,13 @@ public class ProduitController {
 		
 		return "redirect:ajoutProduit";
 	}
+	
+	@GetMapping("produits")
+	public String getProduits(Model m)
+	{
+		m.addAttribute("listeP", ips.getProduits());
+		
+		return "produits";
+	}
 
 }
