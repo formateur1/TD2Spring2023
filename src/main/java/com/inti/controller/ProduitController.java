@@ -76,5 +76,21 @@ public class ProduitController {
 		
 		return "redirect:/produit/produits";
 	}
+	
+	@GetMapping("modifierProduit/{id}")
+	public String modifierProduit(Model m, @PathVariable("id") int id)
+	{
+		m.addAttribute("p1", ips.getProduit(id));
+		
+		return "modifierProduit";
+	}
+	
+	@PostMapping("modifierProduit")
+	public String modifierProduit(@ModelAttribute("produit") Produit p)
+	{
+		ips.updateProduit(p);
+		
+		return "redirect:/produit/produits";
+	}
 
 }

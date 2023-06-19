@@ -31,7 +31,7 @@
 		    <div class="col"><c:out value="${ prod.getPoids() }"></c:out></div>
 		    <div class="col">
 		    	<a href="deleteProduit/${ prod.getId() }"> <button type="button" class="btn btn-outline-danger">Supprimer</button></a>
-		    	<a href="getProduit/${ prod.getId() }"> <button type="button" class="btn btn-outline-danger">Modifier</button></a>
+		    	<a href="modifierProduit/${ prod.getId() }"> <button type="button" class="btn btn-outline-danger">Modifier</button></a>
 		    </div>	  
 	</div>
 	</c:forEach>

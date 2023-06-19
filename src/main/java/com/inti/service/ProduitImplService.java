@@ -77,5 +77,19 @@ public class ProduitImplService implements IProduitService {
 			session.getTransaction().commit();
 		}		
 	}
+	
+	@Override
+	public void updateProduit(Produit p) {
+		try {
+			session.beginTransaction();
+			
+			session.update(p);
+			
+			session.getTransaction().commit();			
+		} catch (Exception e) {
+			e.printStackTrace();
+			session.getTransaction().commit();
+		}		
+	}
 
 }
